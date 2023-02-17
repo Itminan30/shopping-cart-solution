@@ -28,9 +28,13 @@ const singlePhonePrice = 1219;
 document.getElementById('btn-phone-plus').addEventListener('click',function(){
     // updatePhonePrice(updatePhoneNumber(true)*singlePhonePrice);
     updateItemPrice(updateItemNumber(true, 'phone-number-field'), singlePhonePrice,'phone-total');
+    setSubtotal();
+    setFinaltotal()
 })
 // events occur when - button is clicked
 document.getElementById('btn-phone-minus').addEventListener('click',function(){
     // updatePhonePrice(updatePhoneNumber(false)*singlePhonePrice);
     updateItemPrice(updateItemNumber(false, 'phone-number-field'), singlePhonePrice,'phone-total');
+    setSubtotal();
+    setFinaltotal()
 })

@@ -19,3 +19,15 @@ function updateItemNumber(isIncrease, fieldId){
 function updateItemPrice(newItemNumber, singleItemPrice, fieldId){
     document.getElementById(fieldId).innerText = newItemNumber*singleItemPrice;
 }
+
+function getItemPrice(fieldId){
+    const itemPrice = parseInt(document.getElementById(fieldId).innerText);
+    return itemPrice;
+}
+
+function setSubtotal(){
+    document.getElementById('sub-total').innerText = getItemPrice('phone-total') + getItemPrice('case-total');
+}
+function setFinaltotal(){
+    document.getElementById('final-total').innerText = getItemPrice('phone-total') + getItemPrice('case-total');
+}
